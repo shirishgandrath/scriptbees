@@ -1,0 +1,42 @@
+/* anchor tag */
+@mixin a {
+	color: $anchor !important;	
+}
+
+/* Button pry_btn  extend*/
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
+/* Media querys */
+@mixin sm-min {
+	@media (min-width: 768px) {
+		@content
+	}
+}
+
+@mixin md-min {
+	@media (min-width: 992px) {
+		@content
+	}
+}
+
+@mixin lg-min {
+	@media (min-width: 1024px) {
+		@content
+	}
+}
+
+/* Box-shadow */
+@mixin box-shadow {
+	box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+	-ms-box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+}
